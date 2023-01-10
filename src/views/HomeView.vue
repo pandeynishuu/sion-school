@@ -2,11 +2,11 @@
   <template-view>
     <!-- carasoul section -->
     <div class="fluid-container">
-      <carasoul-component />
+      <carousel-component></carousel-component>
     </div>
 
     <!-- text section -->
-    <!-- <div class="py-5">
+    <div class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- why sion school -->
     <!-- <div class="py-5" style="background-color:#EEEDE7;">
@@ -112,7 +112,7 @@
 
 <script>
 // @ is an alias to /src
-import CarasoulComponent from "@/components/CarasoulComponent";
+import CarouselComponent from "@/components/CarouselComponent";
 import TemplateView from "@/views/TemplateView";
 import { mapGetters } from "vuex";
 import FooterComponent from "@/components/FooterComponent";
@@ -120,7 +120,7 @@ export default {
   name: "HomeView",
   components: {
     TemplateView,
-    CarasoulComponent,
+    CarouselComponent,
     FooterComponent,
   },
   computed: {
@@ -128,8 +128,8 @@ export default {
       about: "get_about",
       events: "get_event",
     }),
-    dental() {
-      return this.events.find((v) => (v.slug = "free-dental-checkup-seminar"));
+    message() {
+      return this.about.find((v) => (v.slug = "message-from-director"));
     },
   },
 };
