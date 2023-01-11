@@ -75,7 +75,7 @@ export default {
   border-right: solid white 2px;
   padding: 0 10px;
 }
-.gallery {
+.message {
   padding: 45px 0px;
   background: url(https://valleyview.edu.np/css/images/bg-2.png) center fixed repeat;
   border-bottom: 1px solid #fff;

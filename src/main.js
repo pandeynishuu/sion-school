@@ -5,7 +5,8 @@ import router from "./router";
 import Vuesax from "vuesax";
 
 import "vuesax/dist/vuesax.css"; //Vuesax styles
-
+import VueYouTubeEmbed from "vue-youtube-embed";
+Vue.use(VueYouTubeEmbed);
 Vue.use(Vuesax, {
   // options here
 });
