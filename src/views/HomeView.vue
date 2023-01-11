@@ -72,6 +72,7 @@
         </vueper-slides>
       </div>
     </div>
+
     <!-- why sion school -->
     <div class="py-5" style="background-color: #eeede7">
       <div class="container">
@@ -92,7 +93,8 @@
       </div>
     </div>
 
-    <div class="py-3">
+    <!-- News & Events -->
+    <div class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -109,6 +111,17 @@
                 <img :src="event.image" alt="" class="fluid-img" style="height: 27vh" />
               </template>
             </vs-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- google map section -->
+    <div class="py-5">
+      <div class="flux-container">
+        <div class="row">
+          <div class="col-md-12">
+            <div v-html="company.googlemap"></div>
           </div>
         </div>
       </div>
@@ -141,6 +154,7 @@ export default {
       about: "get_about",
       event: "get_event",
       video: "get_gallery",
+      company: "get_company",
     }),
     why() {
       return this.about.find((v) => v.slug == "why-sion-school");
