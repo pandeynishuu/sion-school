@@ -78,7 +78,14 @@
                 <li >{{title.name}}</li>
                </a> -->
                 <li v-for="(about, index) in about" :key="index">
-                  <a class="dropdown-item" href="#">{{ about.title }}</a>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    @click.prevent="
+                      $router.push({ name: 'about', params: { slug: about.slug } })
+                    "
+                    >{{ about.title }}</a
+                  >
                 </li>
               </ul>
             </li>
@@ -95,7 +102,17 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li v-for="(information, index) in information" :key="index">
-                  <a class="dropdown-item" href="#">{{ information.title }}</a>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    @click.prevent="
+                      $router.push({
+                        name: 'information',
+                        params: { slug: information.slug },
+                      })
+                    "
+                    >{{ information.title }}</a
+                  >
                 </li>
               </ul>
             </li>

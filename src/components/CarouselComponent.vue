@@ -1,5 +1,5 @@
 <template>
-  <div class="img-fluid" style="height: 60vh">
+  <div class="img-fluid">
     <vue-flux
       :options="fluxOptions"
       :images="fluxImages"
@@ -24,6 +24,7 @@ export default {
   data: () => ({
     fluxOptions: {
       autoplay: true,
+      height: "600px",
     },
     fluxImages: [
       "https://sionschool.edu.np/slider/1652678580275522899_828494428545774_4921955564091694723_n.jpg",
@@ -31,7 +32,7 @@ export default {
       "https://sionschool.edu.np/slides/1643691226banner%20up%20second%20floor%20.jpg",
     ],
     fluxTransitions: {
-      transitionBook: Transitions.transitionBook,
+      transitionBook: Transitions.transitionKenburn,
     },
   }),
 };

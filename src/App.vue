@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <vue-facebook-page
+      data-href="https://www.facebook.com/sionschooldharan16"
+      link-text="Sion School"
+    />
     <router-view />
   </div>
 </template>
@@ -13,25 +17,27 @@ export default {
     ...mapActions([
       "fetchAbout",
       "fetchEvent",
-      "fetchGallery",
+      "fetchVideo",
       "fetchCompany",
       "fetchInformation",
       "fetchNotice",
+      "fetchGallery",
     ]),
   },
   created() {
     this.fetchAbout();
     this.fetchEvent();
-    this.fetchGallery();
+    this.fetchVideo();
     this.fetchCompany();
     this.fetchInformation();
     this.fetchNotice();
+    this.fetchGallery();
   },
 };
 </script>
 <style>
 #app {
-  font-family: Rubik, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -80,5 +86,8 @@ export default {
   background: url(https://valleyview.edu.np/css/images/bg-2.png) center fixed repeat;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
+}
+.footer {
+  background-image: url(https://sionschool.edu.np/images/footer2.jpg);
 }
 </style>

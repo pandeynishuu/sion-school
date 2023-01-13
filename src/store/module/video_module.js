@@ -2,22 +2,21 @@
 import { axiosApi } from "@/config/axios"
 
 export const state = {
-   gallery : {}
+   video : {}
 }
 export const getters = {
-   get_gallery : (state)=>state.gallery
+   get_video : (state)=>state.video
 }
 export const mutations = {
-   set_gallery :(state,data) => state.gallery = data
+   set_video :(state,data) => state.video = data
 }
 export const actions = {
-   async fetchGallery({commit}){
+   async fetchVideo({commit}){
        try{
-           var response = await axiosApi.get("photo")
+           var response = await axiosApi.get("videos")
            console.warn(response.data.data)
        if(response.status==200){
-          
-           commit('set_gallery',response.data.data)
+           commit('set_video',response.data.data)
        }
        } catch(e){
            console.warn(e)

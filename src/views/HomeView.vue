@@ -24,7 +24,7 @@
       </div>
     </div>
     <!-- message from director -->
-    <div class="message py-5">
+    <!-- <div class="message py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- gallery section -->
     <div class="gallery">
@@ -61,7 +61,7 @@
             :key="i"
             :title="`<iframe
               width='416'
-              height='315'
+              height='315' 
               src='https://www.youtube.com/embed/${slide.video}'
               title=${slide.title}
               frameborder='0'
@@ -74,7 +74,7 @@
     </div>
 
     <!-- why sion school -->
-    <div class="py-5" style="background-color: #eeede7">
+    <!-- <div class="py-5" style="background-color: #eeede7">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -91,7 +91,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- News & Events -->
     <div class="py-5">
@@ -117,7 +117,7 @@
     </div>
 
     <!-- google map section -->
-    <div class="py-5">
+    <div py-5>
       <div class="flux-container">
         <div class="row">
           <div class="col-md-12">
@@ -126,9 +126,6 @@
         </div>
       </div>
     </div>
-
-    <!-- footer section -->
-    <footer-component />
   </template-view>
 </template>
 
@@ -137,7 +134,6 @@
 import CarouselComponent from "@/components/CarouselComponent";
 import TemplateView from "@/views/TemplateView";
 import { mapGetters } from "vuex";
-import FooterComponent from "@/components/FooterComponent";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 export default {
@@ -145,7 +141,6 @@ export default {
   components: {
     TemplateView,
     CarouselComponent,
-    FooterComponent,
     VueperSlides,
     VueperSlide,
   },
@@ -153,7 +148,7 @@ export default {
     ...mapGetters({
       about: "get_about",
       event: "get_event",
-      video: "get_gallery",
+      video: "get_video",
       company: "get_company",
     }),
     why() {

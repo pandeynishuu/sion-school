@@ -3,19 +3,15 @@ import App from "./App.vue";
 import store from "./store";
 import router from "./router";
 import Vuesax from "vuesax";
-import * as VueGoogleMaps from 'vue2-google-maps'
 import "vuesax/dist/vuesax.css"; //Vuesax styles
 import VueYouTubeEmbed from "vue-youtube-embed";
+import VueFacebookPage from 'vue-facebook-page'
 Vue.use(VueYouTubeEmbed);
+Vue.use(VueFacebookPage, '1239401336829223')
 Vue.use(Vuesax, {
   // options here
 });
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyC-O3bh2AiPqKlEKLwz6mPNTNu4rym3ZoE',
-    libraries: 'places',
-  }
-});
+
 // Slick
 
 
